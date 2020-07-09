@@ -3,7 +3,7 @@
 ![screenshots](https://github.com/grasp2/rice/blob/master/Images/A5QuAms.png)
 
 #
-Copy this from from my .config if you want to get the same rice
+Copy this from from my repo if you want to get the same rice
 * Xresources
 * i3
 * launcher.rasi (the theme for rofi)
