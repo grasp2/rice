@@ -3,4 +3,7 @@
 ![screenshots](https://github.com/grasp2/rice/blob/master/Images/A5QuAms.png)
 
 #
-These are my dotfiles if you want to try out my rice
+Copy this from from my .config if you want to get the same rice
+* Xresources
+* i3
+I think that's it.
