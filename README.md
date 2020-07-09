@@ -6,6 +6,6 @@
 Copy this from from my .config if you want to get the same rice
 * Xresources
 * i3
-* launcher.rofi (the theme for rofi obviously)
+* launcher.rasi (the theme for rofi)
 
 I think that's it.
