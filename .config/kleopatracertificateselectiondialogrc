@@ -1,0 +1,17 @@
+[Geometry]
+size=568,278
+
+[View #0]
+ColumnOrder=0,1,2,3,4,5,6,7,8,9,10,11,12
+ColumnVisibility=true,true,true,true,true,false,true,false,false,false,false,false,false
+ColumnWidths=260,260,163,100,90,0,144,0,0,0,0,0,0
+SortAscending=1
+SortColumn=0
+column-sizes=260,260,163,100,90,0,144,0,0,0,0,0,0
+hierarchical-view=true
+key-filter=all-certificates
+magic=262254561
+sort-column=0
+sort-descending=true
+string-filter=
+title=

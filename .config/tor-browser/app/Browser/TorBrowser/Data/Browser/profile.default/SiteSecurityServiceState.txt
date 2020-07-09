@@ -1,0 +1,7 @@
+firefox.settings.services.mozilla.com:HSTS	1	18433	1624231809677,1,0,2
+www.eff.org:HSTS	1	18433	1655767929694,1,1,2
+versioncheck-bg.addons.mozilla.org:HSTS	1	18433	1592696230408,1,0,2
+versioncheck-bg.addons.mozilla.org:HPKP	1	18433	1597879930409,1,1,WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=
+addons.cdn.mozilla.net:HSTS	0	18432	1624143647291,1,1,2
+blocklists.settings.services.mozilla.com:HSTS	1	18433	1624232051610,1,0,2
+aus1.torproject.org:HSTS	2	18434	1608506733834,1,0,2

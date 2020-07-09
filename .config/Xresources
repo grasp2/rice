@@ -1,0 +1,124 @@
+!! Transparency (0-1)
+!! *.alpha: 0.8
+
+! Font
+*.font: xft:Iosevka:size=10:style=Semibold
+rofi.font: Inconsolata 11
+
+
+! *.font: -misc-dejavu sans mono-medium-r-normal-*-11-*-96-96-*-*-iso8859-*
+!URxvt*font: xft:terminus:pixelsize=15
+
+!Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+!Xft.hintstyle: hintslight
+Xft.dpi: 96
+!Xcursor.theme: miniature
+
+/*
+*colorUl:       #1378ab
+! special
+*.foreground:   #b9b9b9
+*.background:   #101010
+*.cursorColor:  #b9b9b9
+
+! black
+*.color0:       #151515
+*.color8:       #404040
+
+! red
+*.color1:       #4a3436
+*.color9:       #4a3436
+
+! green
+*.color2:       #514f4f
+*.color10:      #484848
+
+! yellow
+*.color3:       #686868
+*.color11:      #686868
+
+! blue
+*.color4:       #8e8e8e
+*.color12:      #8e8e8e
+
+! magenta
+*.color5:       #5c3b3f
+*.color13:      #5c3b3f
+
+! cyan
+*.color6:       #675f5f
+*.color14:      #675f5f
+
+! white
+*.color7:       #b9b9b9
+*.color15:      #c9c9c9
+*/
+
+! special
+*.foreground:   #EAEAEA
+*.background:   #252525
+*.cursorColor:  #aeaeae
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #c34b46
+*.color9:       #d36a6a
+
+! green
+*.color2:       #c35f5a
+*.color10:      #d37d7d
+
+! yellow
+*.color3:       #c36f6b
+*.color11:      #d38f8f
+
+! blue
+*.color4:       #df7f7a
+*.color12:      #cd9999
+
+! magenta
+*.color5:       #df908b
+*.color13:      #e6bcbc
+
+! cyan
+*.color6:       #dfa8a5
+*.color14:      #e6d4d4
+
+! white
+*.color7:       #ebb9b6
+*.color15:      #e6dfdf
+
+!!Urxvt keybindings
+URxvt.iso14755:                   false
+URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
+URxvt.scrollBar: 	false
+URxvt.perl-ext-common: ...,font-size
+
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
+
+!URxvt.font: 9x15
+!URxvt.font: xft:Deja Vu Sans Mono:pixelsize=10
+!URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
+!URxvt.font: xft:DejaVu Sans Mono:pixelsize=10
+!URxvt.font: xft:Bitstream Vera Sans Mono:autohint=true:pixelsize=10
+!URxvt.font: xft:Terminus:pixelsize=10
+!URxvt.font: -misc-dejavu sans mono-medium-r-normal-*-11-*-96-96-*-*-iso8859-*
+!URxvt.font: xft:DejaVu Sans Mono:antialias=true:pixelsize=12
+
+!dmenu.font: -misc-dejavu sans mono-medium-r-normal-*-11-*-96-96-*-*-iso8859-*
+dmenu.background: #151515
+dmenu.foreground: #D7D0C7
+dmenu.selbackground: #5350b9 
+dmenu.selforeground: #D7D0C7
+

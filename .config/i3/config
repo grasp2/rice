@@ -1,0 +1,232 @@
+ #---GUI---# #
+hide_edge_borders none
+
+for_window [class="^.*"] border pixel 2 
+gaps inner $inner_gaps
+gaps outer $outer_gaps
+
+bar {
+	font pango:Inconsolata 11
+        status_command i3blocks 
+	position top
+	mode dock
+	modifier none
+  colors {
+                background #131313
+                statusline #fffff
+# class  		           border  backgr  text
+                focused_workspace  #C34B46 #C34B46 #ffffff
+                inactive_workspace #131313 #212121 #ffffff
+		urgent_workspace   #545454 #f81118 #ffffff
+   }
+}
+
+# class                   border  backgr. text    indic.   child_border
+  client.focused          #C34B46 #C34B46 #88C0D0 #C34B46
+  client.focused_inactive #404040 #404040 #88C0D0 #454948
+  client.unfocused        #404040 #404040 #88C0D0 #454948
+  client.urgent           #D08770 #3B4252 #88C0D0 #268BD2
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
+  client.background       #3B4252
+
+# font for window titles & bar
+font pango:Terminus 9 
+
+# #---Shortcuts---# #
+set $inner_gaps 3 
+set $outer_gaps 3 
+set $term --no-startup-id $TERMINAL
+set $mod Mod4
+set $shutdown exec --no-startup-id i3exit shutdown, mode "default" 
+set $reboot exec --no-startup-id i3exit reboot, mode "default" 
+set $mail exec urxvt -e neomutt
+set $rofi exec rofi -show run
+set $dmenu exec dmenu_run
+set $ranger exec urxvt -e ranger
+#set $nnn exec urxvt -e nnn
+#set $fish exec urxvt -e fish 
+set $htop exec urxvt -e htop
+set $msc exec urxvt -e ncmpcpp
+set $calc exec urxvt -e R
+set $urxvt exec urxvt
+set $fish exec urxvt -e fish
+set $pass exec bwmenu -c 10
+
+# #---Startup---# #
+exec --no-startup-id nm-applet
+exec --no-startup-id picom
+#exec --no-startup-id mpd --verbose --stdout --no-daemon
+exec --no-startup-id sh ~/.fehbg
+exec --no-startup-id nmcli con up se.sundsvall.ovpn.com
+
+# #---Key bindings---# #
+bindsym $mod+Return $fish 
+#bindsym $mod+Shift+Return $nnn
+
+bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+Escape workspace prev
+bindsym $mod+Shift+Escape exec --no-startup-id prompt "Exit i3?" "i3 exit" 
+
+# #---Letter Key Bindings---# #
+
+bindsym $mod+a focus parent
+#bindsym $mod+Shift+a
+
+bindsym $mod+b exec --no-startup-id $BROWSER
+bindsym $mod+Shift+b exec qutebrowser 
+
+#bindsym $mod+c
+bindsym $mod+Shift+c reload
+
+bindsym $mod+d $rofi
+#bindsym $mod+Shift+d
+
+bindsym $mod+e layout toggle split
+#bindsym $mod+Shift+e
+
+bindsym $mod+f fullscreen toggle
+#bindsym $mod+Shift+f
+
+bindsym $mod+g split h
+bindsym $mod+Shift+g $htop
+
+bindsym $mod+h focus left 
+bindsym $mod+Shift+h move left
+
+#bindsym $mod+i
+#bindsym $mod+Shift+i
+
+bindsym $mod+j focus down
+bindsym $mod+Shift+j move down 
+
+bindsym $mod+k focus up
+bindsym $mod+Shift+k move up
+
+bindsym $mod+l focus right
+bindsym $mod+Shift+l move right
+
+#bindsym $mod+m $msc 
+#bindsym $mod+Shift+m $mail
+
+bindsym $mod+n $ranger
+#bindsym $mod+Shift+n
+
+#bindsym $mod+o
+#bindsym $mod+Shift+o
+
+bindsym $mod+p $pass
+#bindsym $mod+Shift+p
+
+bindsym $mod+q kill
+#bindsym $mod+Shift+q
+
+bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r restart
+bindsym $mod+Ctrl+r $reboot
+
+bindsym $mod+s layout stacking
+bindsym $mod+Shift+s $shutdown
+
+#bindsym $mod+t
+#bindsym $mod+Shift+t
+
+#bindsym $mod+u
+#bindsym $mod+Shift+u
+
+bindsym $mod+v split v
+#bindsym $mod+Shift+v
+
+bindsym $mod+w layout tabbed
+#bindsym $mod+Shift+w
+
+#bindsym $mod+x
+bindsym $mod+Shift+x exec i3lock-fancy 
+
+bindsym $mod+odiaeresis focus right
+bindsym $mod+Shift+odiaeresis move  right
+
+
+floating_modifier Mod4
+
+# custom name for workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym odiaeresis resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+#Spawn in specific windows
+assign [class="Nightly"] $ws2
+assign [class="^URxvt$"] $ws1
+assign [title="ranger"] $ws2
+
+
+#Floating Windows
+for_window [class="Steam"] floating enable
+
+# #---Dropdown windows---# #
+for_window [instance="dropdown_dc"] floating enable
+for_window [instance="dropdown_dc"] move scratchpad
+for_window [instance="dropdown_dc"] scratchpad show
+for_window [instance="dropdown_dc"] sticky enable
+for_window [instance="dropdown_dc"] move position center
+
+for_window [instance="dropdown_dc"] rezise set 800 300
+for_window [instance="dropdown_dc" ] border pixel 2
+#exec --no-startup-id $term 
