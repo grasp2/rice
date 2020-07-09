@@ -6,5 +6,6 @@
 Copy this from from my .config if you want to get the same rice
 * Xresources
 * i3
+* rofi
 
 I think that's it.
